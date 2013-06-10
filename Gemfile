@@ -32,12 +32,23 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :assets do
-  gem 'twitter-bootstrap-rails'
-end
+gem "less-rails"
+gem 'twitter-bootstrap-rails'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
+
+group :development do
+  gem 'rack-mini-profiler'
+  gem 'bullet'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'

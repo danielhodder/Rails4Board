@@ -1,0 +1,7 @@
+<%= cache topic do %>
+  <tr>
+    <td><%= topic.name %></td>
+    <td><%= topic.created_by_user.try(:name) %></td>
+    <td></td>
+  </tr>
+<% end %>
